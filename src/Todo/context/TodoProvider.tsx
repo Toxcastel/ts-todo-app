@@ -28,7 +28,6 @@ const INITIAL_STATE: TodoState = {
     completed: 0,
     pending: 2
 };
-// hi
 export const TodoProvider = ({ children }: props) => {
 
     /* Normalmente el reducer viene como: useReducer(reducer, initialState, init) , donde init es una opción para carga peresoza que crea un initial state. Aquí no se necesita eso */
