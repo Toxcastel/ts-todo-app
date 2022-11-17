@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import { TodoContext } from "../context/TodoContext";
+import { TodoItem } from "./TodoItem";
 
 export const TodoList = () => {
     /* Adentro del <ul> necesitamos ver los 'Todo' que están en nuestro State. 
@@ -10,7 +11,7 @@ export const TodoList = () => {
     const {todos} = todoState;
     return (
         <ul>
-            {todos.map(todo => todo.desc)}
+            {todos.map(todo => <TodoItem key={todo.id} todo={todo}/>)}
         </ul>
     );
 };
