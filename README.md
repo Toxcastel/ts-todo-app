@@ -15,3 +15,6 @@ The page will reload if you make edits.\
 You will also see any lint errors in the console.
 
 ### Notes
+
+.tsx files return react components
+.ts files are just regular files
