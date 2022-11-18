@@ -6,6 +6,7 @@ import { TodoState } from "../interfaces/interfaces";
 
 export type TodoContextProps = {
     todoState: TodoState;
+    toggleTodo: (id: string) => void;
 };
 
 // createContext es un genérico que lo que va a fluir internamente es un TodoContextProps
