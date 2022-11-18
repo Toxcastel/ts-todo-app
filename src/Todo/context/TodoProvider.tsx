@@ -33,5 +33,10 @@ export const TodoProvider = ({ children }: props) => {
     /* Normalmente el reducer viene como: useReducer(reducer, initialState, init) , donde init es una opción para carga peresoza que crea un initial state. Aquí no se necesita eso */
     const [todoState, dispatch] = useReducer( todoReducer, INITIAL_STATE)
 
-    return <TodoContext.Provider value={{todoState}}>{children}</TodoContext.Provider>;
+    const toggleTodo = (id: string) => {
+        // el dispatch que viene del reducer
+        dispatch({type: 'toggleTodo', payload: {id}})
+    }
+
+    return <TodoContext.Provider value={{todoState, toggleTodo}}>{children}</TodoContext.Provider>;
 };
